@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/NavBar/NavBar";
+import QueryProvider from "@/QueryProvider/QueryProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +29,9 @@ export default function RootLayout({ children }) {
         </div>
 
         <div className="container my-20 mx-auto px-4 md:px-9  min-h-[calc(100vh-380px)]">
+          <QueryProvider>
           {children}
+          </QueryProvider>
         </div>
 
       </body>

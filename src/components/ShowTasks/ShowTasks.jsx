@@ -21,7 +21,7 @@ const ShowTasks = () => {
     })
 
 
-    const { data: count = {}, isLoading: isloading } = useQuery({
+    const { data: count = {} } = useQuery({
         queryKey: ['tasksCount', axios],
         queryFn: async () => {
             const res = await axios.get('/tasksCount')
@@ -56,6 +56,9 @@ const ShowTasks = () => {
         }
     }
 
+    if(isLoading){
+        return <p className=''>Loading.......</p>
+    }
 
     return (
         <div>

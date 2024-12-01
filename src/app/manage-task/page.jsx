@@ -1,9 +1,10 @@
+import ManageTasks from '@/components/ManageTasks/ManageTasks';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            manage task
+            <ManageTasks></ManageTasks>
         </div>
     );
 };
